@@ -43,12 +43,12 @@ tests-ci-all-python:
 .PHONY: unittest
 unittest:
 	coverage run -m unittest discover -s podman/tests/unit
-	coverage report -m --skip-covered --fail-under=80 --omit=./podman/tests/* --omit=.tox/* --omit=/usr/lib/*
+	coverage report -m --skip-covered --fail-under=85 --omit=./podman/tests/* --omit=.tox/* --omit=/usr/lib/*
 
 .PHONY: integration
 integration:
 	coverage run -m unittest discover -s podman/tests/integration
-	coverage report -m --skip-covered --fail-under=80 --omit=./podman/tests/* --omit=.tox/* --omit=/usr/lib/*
+	coverage report -m --skip-covered --fail-under=85 --omit=./podman/tests/* --omit=.tox/* --omit=/usr/lib/*
 
 .PHONY: tox
 tox:
